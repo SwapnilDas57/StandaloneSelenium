@@ -1,0 +1,9 @@
+package collectionsFramework;
+
+public class ArrayList_RemovingElements {
+
+	public static void main(String[] args) {
+
+	}
+
+}

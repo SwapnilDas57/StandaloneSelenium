@@ -1,0 +1,26 @@
+package collectionsFramework;
+
+import java.util.HashMap;
+
+public class HashMapTest {
+
+	public static void main(String[] args) {
+		
+		//Map stores data as key value pairs
+		HashMap<String,String> hm=new HashMap<String, String>();
+		
+		hm.put("Swapnil", "Das");
+		hm.put("Arunima", "Ganguly");
+		System.out.println(hm.get("Swapnil"));
+		
+		//if you re enter the same key, the value gets updated
+		hm.put("Swapnil", "Das");
+		
+		System.out.println(hm.get("Swapnil"));
+		System.out.println(hm.get("Arunima"));
+		
+		hm.remove("Swapnil");
+		System.out.println(hm.get("Swapnil")); //--> after removing returns null
+	}
+
+}

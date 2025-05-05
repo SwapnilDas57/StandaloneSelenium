@@ -1,0 +1,25 @@
+package practiceCode;
+
+public class CheckPrimeNumber {
+
+	public static void main(String args[]) {
+		boolean check=CheckPrimeNumber.checkPrime(10);
+		System.out.println(check);
+		boolean check2=CheckPrimeNumber.checkPrime(10);
+		System.out.println(check2);
+	}
+	
+	public static boolean checkPrime(int number) {
+		boolean isPrime=true;
+		
+		for(int i=2;i<number/2;i++) {
+			if(number%i==0) {
+				isPrime=false;
+				break;
+			}
+		}
+		
+		return isPrime;
+	}
+	
+}

@@ -1,0 +1,13 @@
+package practiceCode;
+
+public class SumOfAnArray {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public int sum(int arr[]) {
+		int sum=0;
+	}
+
+}

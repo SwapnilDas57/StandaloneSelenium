@@ -1,0 +1,44 @@
+package collectionsFramework;
+
+import java.util.ArrayList;
+
+public class ArrayList_RemovingElements {
+
+	public static void main(String[] args) {
+	ArrayList<String> arr=new ArrayList<String>();
+		
+		//To add elements in Array list use add function
+		arr.add("Swapnil");
+		arr.add("Das");
+		arr.add("27");
+		
+		System.out.println(arr);
+		
+		//removing using index, returns the removed string
+		String strRemoved=arr.remove(2);
+		System.out.println(arr);
+		System.out.println("The removed String: "+strRemoved);
+		
+		//removing using object, returns boolean value if removed
+		boolean b=arr.remove("Das");
+		System.out.println(arr);
+		System.out.println("Is the string removed: "+b);
+		
+		arr.add("27");
+		arr.add("Das");
+		arr.add("01/12/1997");
+		
+		ArrayList<String> arr1=new ArrayList<String>();
+		arr1.add("Das");
+		arr1.add("27");
+		
+		//removing using other list, any values matching between the two arraylist will be deleted
+		arr.removeAll(arr1);
+		System.out.println(arr);
+		
+		//removing first element
+		arr.removeFirst();
+		System.out.println(arr);
+	}
+
+}

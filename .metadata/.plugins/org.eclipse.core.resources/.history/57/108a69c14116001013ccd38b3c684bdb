@@ -1,0 +1,19 @@
+package collectionsFramework;
+
+import java.util.HashMap;
+
+public class HashMapTest {
+
+	public static void main(String[] args) {
+		HashMap<String,String> hm=new HashMap<String, String>();
+		
+		hm.put("Swapnil", "Das");
+		hm.put("Arunima", "Ganguly");
+		
+		System.out.println(hm.get("Swapnil"));
+		System.out.println(hm.get("Arunima"));
+		
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+package collectionsFramework;
+
+import java.util.ArrayList;
+
+public class ArrayList_OtherActions {
+
+	public static void main(String[] args) {
+		ArrayList<String> arr=new ArrayList<String>();
+		
+		//To add elements in Array list use add function
+		arr.add("Swapnil");
+		arr.add("Das");
+		arr.add("27");
+		arr.add("01/05/1997");
+		
+		System.out.println(arr);
+		
+		//To fetch any record from Arraylist
+		System.out.println(arr.get(1));
+		
+		//To fetch the first record
+		System.out.println(arr.getFirst());
+		
+		//To fetch the last record
+		System.out.println(arr.getLast());
+	}
+
+}

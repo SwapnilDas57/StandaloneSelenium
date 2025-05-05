@@ -1,0 +1,21 @@
+package test.test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class test1 {
+
+	public static void main(String[] args) {
+		
+		//If you want to run in Chrome, uncomment the below line:
+		WebDriver driver = new ChromeDriver();
+		
+		//If you want to run in Firefox, uncomment the below line:
+		
+		driver.get("https://www.saucedemo.com/");
+		System.out.println("The URL loaded is: "+driver.getCurrentUrl());
+		System.out.println("The current title of the web page: "+driver.getTitle());
+		driver.close();
+	}
+
+}

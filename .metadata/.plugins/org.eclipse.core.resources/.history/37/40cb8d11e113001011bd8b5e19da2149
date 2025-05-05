@@ -1,0 +1,9 @@
+package practiceCode;
+
+public class SumOfAnArray {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,50 @@
+package collectionsFramework;
+
+import java.util.ArrayList;
+
+public class ArrayList1 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> arr=new ArrayList<String>();
+		
+		//To add elements in Array list use add function
+		arr.add("Swapnil");
+		arr.add("Das");
+		arr.add("27");
+		
+		System.out.println(arr);
+		
+		//adding to a particular index
+		arr.add(2, "MALE");
+		System.out.println(arr);
+		
+		//To add at the beginning of the Array list
+		arr.addFirst("Son of Subrata Das");
+		System.out.println(arr);
+		
+		//To add at the end of the array list
+		arr.addLast("Son of Sarbari Das");
+		System.out.println(arr);
+		
+		ArrayList<String> arr1=new ArrayList<String>();
+		arr1.add("This");
+		arr1.add("is");
+		arr1.add("a");
+		arr1.add("new");
+		arr1.add("arraylist");
+		
+		System.out.println(arr1);
+		
+		//Appending one arraylist to another at the end
+		arr.addAll(arr1);
+		System.out.println(arr);
+		
+		///Appending one arraylist to another at specified index
+		arr.addAll(11, arr1);
+		System.out.println(arr);
+		
+		//If instead of 11, you give 12(which is the size of arraylist) in that case you will get IndexOutOfBoundsException
+	}
+
+}

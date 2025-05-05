@@ -1,0 +1,20 @@
+package collectionsFramework;
+
+import java.util.ArrayList;
+
+public class ArrayList_OtherActions {
+
+	public static void main(String[] args) {
+		ArrayList<String> arr=new ArrayList<String>();
+		
+		//To add elements in Array list use add function
+		arr.add("Swapnil");
+		arr.add("Das");
+		arr.add("27");
+		
+		System.out.println(arr);
+		
+		
+	}
+
+}

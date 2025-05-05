@@ -1,0 +1,50 @@
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class IndependentTest {
+
+	public static void main(String[] args) {
+		
+		Properties prop=new Properties();
+		try {
+			FileReader fr=new FileReader(TestBase.CONFIGPATH);
+			prop.load(fr);
+			System.out.println(prop.get("browser"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String strBrowser=(String) prop.get("browser");
+		WebDriver driver=null;
+		if(strBrowser.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver= new ChromeDriver();
+		}else if(strBrowser.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
+		}else if(strBrowser.equals("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver=new FirefoxDriver();
+		}else if(strBrowser.equalsIgnoreCase("chromium")) {
+			WebDriverManager.chromiumdriver().setup();
+		}
+		
+		
+		driver.get("https://www.saucedemo.com/v1/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.quit();
+	}
+
+}

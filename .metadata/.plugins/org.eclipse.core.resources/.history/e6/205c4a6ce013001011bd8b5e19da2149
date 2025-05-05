@@ -1,0 +1,16 @@
+package practiceCode;
+
+public class CheckPrimeNumber {
+
+	public static void main(String args[]) {
+		
+	}
+	
+	public boolean checkPrime(int number) {
+		boolean isPrime=false;
+		
+		
+		return isPrime;
+	}
+	
+}
